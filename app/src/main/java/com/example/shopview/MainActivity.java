@@ -17,10 +17,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         enter = findViewById(R.id.enter_app);
         enter.setOnClickListener(view -> {
             Intent intent =new Intent(MainActivity.this, HomeActivity.class);
             startActivity(intent);
         });
+
+
     }
 }
