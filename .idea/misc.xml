@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/git/ShopApp/app/src/main/res/drawable/button.xml" value="0.2635416666666667" />
+        <entry key="..\:/git/ShopApp/app/src/main/res/drawable/ic_person.xml" value="0.2635416666666667" />
+        <entry key="..\:/git/ShopApp/app/src/main/res/drawable/select.xml" value="0.2635416666666667" />
         <entry key="..\:/git/ShopApp/app/src/main/res/layout/activity_home.xml" value="0.24739583333333334" />
         <entry key="..\:/git/ShopApp/app/src/main/res/layout/activity_main.xml" value="0.24739583333333334" />
         <entry key="..\:/git/ShopApp/app/src/main/res/menu/bottom_navigation.xml" value="0.24739583333333334" />
