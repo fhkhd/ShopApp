@@ -1,5 +1,6 @@
 package com.example.shopview.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.shopview.R;
 
 public class CircleAdAdapter extends RecyclerView.Adapter<CircleAdAdapter.ViewHolder> {
+
+    private Context context;
+    private Listener listener;
+
+    public CircleAdAdapter(Context context , Listener listener) {
+        this.context = context;
+        this.listener = listener;
+    }
+
+    public interface Listener{
+        void onClick(int pos);
+    }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
