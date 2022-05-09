@@ -9,17 +9,8 @@
         android:id="@+id/image_ad"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:background="@color/brown"/>
+        android:scaleType="centerCrop"
+        android:background="@color/brown"
+        android:src="@drawable/ldora"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-        android:orientation="horizontal"
-        android:textAlignment="center"
-        android:layout_marginVertical="5dp"
-        tools:listitem="@layout/ad_circle_item"/>
-    
-    
 </RelativeLayout>
