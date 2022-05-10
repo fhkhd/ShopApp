@@ -1,5 +1,6 @@
 package com.example.shopview.adapter;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,8 +11,17 @@ import com.example.shopview.R;
 
 public class AdHomeAdapter extends RecyclerView.Adapter<AdHomeAdapter.ViewHolder> {
 
-    Context context;
+    private Context context;
+    private CircleAdAdapter.Listener listener;
 
+    public AdHomeAdapter(Context context , CircleAdAdapter.Listener listener) {
+        this.context = context;
+        this.listener = listener;
+    }
+
+    public interface Listener{
+        void onClick(int pos);
+    }
     public AdHomeAdapter(Context context) {
         this.context = context;
     }
@@ -19,14 +29,14 @@ public class AdHomeAdapter extends RecyclerView.Adapter<AdHomeAdapter.ViewHolder
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.recycler_ad_img,parent,false);
+        View view = layoutInflater.inflate(R.layout.ad_recycler,parent,false);
         AdHomeAdapter.ViewHolder viewHolder = new AdHomeAdapter.ViewHolder(view);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.imageView.setVisibility(View.VISIBLE);
+
 
 
     }
