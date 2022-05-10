@@ -23,5 +23,5 @@
         android:layout_below="@+id/ad_home"
         tools:ignore="IncludeLayoutParam" />
 
-
+    <include layout="@layout/discount_home" />
 </RelativeLayout>

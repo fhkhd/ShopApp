@@ -15,6 +15,7 @@ import android.widget.Spinner;
 import com.example.shopview.R;
 import com.example.shopview.adapter.AdHomeAdapter;
 import com.example.shopview.adapter.CircleAdAdapter;
+import com.example.shopview.adapter.DiscountAdapter;
 import com.example.shopview.adapter.GroupingHomeAdapter;
 import com.mig35.carousellayoutmanager.CarouselLayoutManager;
 
@@ -23,7 +24,8 @@ public class HomeFragment extends Fragment {
 
     RecyclerView recyclerView_ad_img
             , recyclerView_ad_circle
-            , recyclerView_grouping;
+            , recyclerView_grouping
+            , recyclerView_discount;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,21 +45,25 @@ public class HomeFragment extends Fragment {
         initID(view);
         initGroupingList();
         initAdRecycler();
+        initDiscountList();
         return view;
     }
 
     private void  initID(View view){
+
         recyclerView_ad_img = view.findViewById(R.id.recycler_image_ad);
 
         recyclerView_ad_circle = view.findViewById(R.id.recycler_circle_ad);
 
         recyclerView_grouping = view.findViewById(R.id.grouping_recycler);
+
+        recyclerView_discount = view.findViewById(R.id.recyclerView_discount);
     }
 
     private void initAdRecycler(){
 
         recyclerView_ad_img.setLayoutManager(new LinearLayoutManager(getContext() , RecyclerView.HORIZONTAL , false));
-        recyclerView_ad_img.setAdapter(new AdHomeAdapter(getContext(), new CircleAdAdapter.Listener() {
+        recyclerView_ad_img.setAdapter(new AdHomeAdapter(getContext(), new AdHomeAdapter.Listener() {
             @Override
             public void onClick(int pos) {
 
@@ -75,6 +81,16 @@ public class HomeFragment extends Fragment {
     private void initGroupingList(){
         recyclerView_grouping.setLayoutManager(new LinearLayoutManager(getContext() , RecyclerView.HORIZONTAL , false));
         recyclerView_grouping.setAdapter(new GroupingHomeAdapter(getContext() , new GroupingHomeAdapter.Listener() {
+            @Override
+            public void onClick(int pos) {
+
+            }
+        }));
+    }
+
+    private void initDiscountList(){
+        recyclerView_discount.setLayoutManager(new LinearLayoutManager(getContext() , RecyclerView.HORIZONTAL , false));
+        recyclerView_discount.setAdapter(new DiscountAdapter(getContext() , new DiscountAdapter.Listener() {
             @Override
             public void onClick(int pos) {
 

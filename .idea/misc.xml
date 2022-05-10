@@ -15,12 +15,14 @@
         <entry key="..\:/git/ShopApp/app/src/main/res/layout/activity_main.xml" value="0.24739583333333334" />
         <entry key="..\:/git/ShopApp/app/src/main/res/layout/ad_circle_item.xml" value="0.24739583333333334" />
         <entry key="..\:/git/ShopApp/app/src/main/res/layout/ad_recycler.xml" value="0.24739583333333334" />
+        <entry key="..\:/git/ShopApp/app/src/main/res/layout/discount_home.xml" value="0.12552083333333333" />
         <entry key="..\:/git/ShopApp/app/src/main/res/layout/fragment_cart.xml" value="0.24739583333333334" />
         <entry key="..\:/git/ShopApp/app/src/main/res/layout/fragment_category.xml" value="0.24739583333333334" />
-        <entry key="..\:/git/ShopApp/app/src/main/res/layout/fragment_home.xml" value="0.24739583333333334" />
+        <entry key="..\:/git/ShopApp/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/git/ShopApp/app/src/main/res/layout/fragment_profile.xml" value="0.24739583333333334" />
         <entry key="..\:/git/ShopApp/app/src/main/res/layout/fragment_search.xml" value="0.24739583333333334" />
         <entry key="..\:/git/ShopApp/app/src/main/res/layout/grouping_home_layout.xml" value="0.40176991150442476" />
+        <entry key="..\:/git/ShopApp/app/src/main/res/layout/item_discount.xml" value="0.12552083333333333" />
         <entry key="..\:/git/ShopApp/app/src/main/res/layout/item_recycler_layout.xml" value="0.536" />
         <entry key="..\:/git/ShopApp/app/src/main/res/layout/item_takhfif.xml" value="0.6" />
         <entry key="..\:/git/ShopApp/app/src/main/res/layout/recycler_ad.xml" value="0.24739583333333334" />

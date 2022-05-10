@@ -1,20 +1,24 @@
 package com.example.shopview.adapter;
+
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.shopview.R;
 
-public class AdHomeAdapter extends RecyclerView.Adapter<AdHomeAdapter.ViewHolder> {
+public class DiscountAdapter extends RecyclerView.Adapter<DiscountAdapter.ViewHolder> {
+
 
     private Context context;
     private Listener listener;
 
-    public AdHomeAdapter(Context context , Listener listener) {
+    public DiscountAdapter(Context context , Listener listener) {
         this.context = context;
         this.listener = listener;
     }
@@ -22,22 +26,17 @@ public class AdHomeAdapter extends RecyclerView.Adapter<AdHomeAdapter.ViewHolder
     public interface Listener{
         void onClick(int pos);
     }
-    public AdHomeAdapter(Context context) {
-        this.context = context;
-    }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.ad_recycler,parent,false);
-        AdHomeAdapter.ViewHolder viewHolder = new AdHomeAdapter.ViewHolder(view);
+        View view = layoutInflater.inflate(R.layout.item_discount,parent,false);
+        DiscountAdapter.ViewHolder viewHolder = new DiscountAdapter.ViewHolder(view);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-
-
 
     }
 
@@ -48,12 +47,17 @@ public class AdHomeAdapter extends RecyclerView.Adapter<AdHomeAdapter.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView imageView ;
+        TextView discount_percent
+                , dicounted_text_home_item;
+        ImageView dicounted_image_home_item;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            imageView = itemView.findViewById(R.id.image_ad);
+            discount_percent = itemView.findViewById(R.id.discount_percent);
+            dicounted_text_home_item = itemView.findViewById(R.id.dicounted_text_home_item);
+            dicounted_image_home_item = itemView.findViewById(R.id.dicounted_image_home_item);
+
         }
     }
 }
