@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/git/ShopApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.25092592592592594" />
+        <entry key="..\:/git/ShopApp/app/src/main/res/drawable/back_search_view.xml" value="0.14166666666666666" />
         <entry key="..\:/git/ShopApp/app/src/main/res/drawable/back_spinner.xml" value="0.2635416666666667" />
         <entry key="..\:/git/ShopApp/app/src/main/res/drawable/button.xml" value="0.2635416666666667" />
         <entry key="..\:/git/ShopApp/app/src/main/res/drawable/ic_baseline_person_outline_24.xml" value="0.25092592592592594" />
@@ -30,6 +31,7 @@
         <entry key="..\:/git/ShopApp/app/src/main/res/layout/takhfif_home.xml" value="0.24739583333333334" />
         <entry key="..\:/git/ShopApp/app/src/main/res/layout/toolbar_home.xml" value="0.24739583333333334" />
         <entry key="..\:/git/ShopApp/app/src/main/res/menu/bottom_navigation.xml" value="0.24739583333333334" />
+        <entry key="..\:/git/ShopApp/app/src/main/res/menu/search_all.xml" value="0.12552083333333333" />
         <entry key="..\:/git/ShopView/app/src/main/res/drawable/ic_untitled_1.xml" value="0.2101851851851852" />
       </map>
     </option>

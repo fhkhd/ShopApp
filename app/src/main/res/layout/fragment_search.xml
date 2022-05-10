@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white_back"
     tools:context=".fragment.SearchFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <EditText
+        android:id="@+id/search_editext"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="search fragment" />
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        android:textColor="@color/black"
+        android:hint="جستجو.."
+        android:fontFamily="@font/iran_sans"
+        android:paddingHorizontal="10dp"
+        />
 
-</FrameLayout>
+
+
+</RelativeLayout>
