@@ -1,5 +1,6 @@
 package com.example.shopview.adapter;
 
+import android.content.Context;
 import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.shopview.R;
 
 public class GroupingHomeAdapter extends RecyclerView.Adapter<GroupingHomeAdapter.ViewHolder> {
+
+    private Context context;
+    private Listener listener;
+
+
+    public GroupingHomeAdapter(Context context, Listener listener) {
+        this.context = context;
+        this.listener = listener;
+    }
+
+    public interface Listener{
+        void onClick(int pos);
+    }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

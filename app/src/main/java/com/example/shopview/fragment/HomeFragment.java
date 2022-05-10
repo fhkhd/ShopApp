@@ -15,14 +15,15 @@ import android.widget.Spinner;
 import com.example.shopview.R;
 import com.example.shopview.adapter.AdHomeAdapter;
 import com.example.shopview.adapter.CircleAdAdapter;
+import com.example.shopview.adapter.GroupingHomeAdapter;
 import com.mig35.carousellayoutmanager.CarouselLayoutManager;
 
 
 public class HomeFragment extends Fragment {
 
     RecyclerView recyclerView_ad_img
-            , recyclerView_ad_circle;
-//            , recyclerView_grouping;
+            , recyclerView_ad_circle
+            , recyclerView_grouping;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,10 +40,8 @@ public class HomeFragment extends Fragment {
 
 
         View view = inflater.inflate(R.layout.fragment_home , container , false);
-        recyclerView_ad_img = view.findViewById(R.id.recycler_image_ad);
-
-        recyclerView_ad_circle = view.findViewById(R.id.recycler_circle_ad);
-
+        initID(view);
+        initGroupingList();
         initAdRecycler();
         return view;
     }
@@ -52,7 +51,7 @@ public class HomeFragment extends Fragment {
 
         recyclerView_ad_circle = view.findViewById(R.id.recycler_circle_ad);
 
-//        recyclerView_grouping = view.findViewById(R.id.grouping_recycler);
+        recyclerView_grouping = view.findViewById(R.id.grouping_recycler);
     }
 
     private void initAdRecycler(){
@@ -73,8 +72,13 @@ public class HomeFragment extends Fragment {
         }));
     }
 
-//    private void initGroupingList(){
-//        recyclerView_grouping.setLayoutManager(new LinearLayoutManager(getContext()));
-//
-//    }
+    private void initGroupingList(){
+        recyclerView_grouping.setLayoutManager(new LinearLayoutManager(getContext() , RecyclerView.HORIZONTAL , false));
+        recyclerView_grouping.setAdapter(new GroupingHomeAdapter(getContext() , new GroupingHomeAdapter.Listener() {
+            @Override
+            public void onClick(int pos) {
+
+            }
+        }));
+    }
 }
