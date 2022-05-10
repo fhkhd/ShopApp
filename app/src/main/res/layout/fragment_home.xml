@@ -5,12 +5,20 @@
     android:layout_height="match_parent"
     tools:context=".fragment.HomeFragment">
 
+
     <include layout="@layout/toolbar_home" android:id="@+id/toolbar_home"/>
 
     <include
+        android:id="@+id/ad_home"
         layout="@layout/recycler_ad_img"
         android:layout_below="@+id/toolbar_home"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="186dp"
+        tools:ignore="IncludeLayoutParam" />
+
+    <include
+        android:id="@+id/grouping_home"
+        layout="@layout/grouping_home_layout"
+        android:layout_below="@+id/ad_home"
         tools:ignore="IncludeLayoutParam" />
 
 

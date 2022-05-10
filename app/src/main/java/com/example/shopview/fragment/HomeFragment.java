@@ -51,13 +51,15 @@ public class HomeFragment extends Fragment {
 
     void initAdRecycler(){
 
+        recyclerView_ad_img.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView_ad_img.setAdapter(new AdHomeAdapter(getContext()));
+
         recyclerView_ad_circle.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView_ad_img.setAdapter( new CircleAdAdapter(getContext(), new CircleAdAdapter.Listener() {
             @Override
             public void onClick(int pos) {
 
-                recyclerView_ad_img.setLayoutManager(new LinearLayoutManager(getContext()));
-                recyclerView_ad_img.setAdapter(new AdHomeAdapter(getContext()));
+
 
             }
         }));

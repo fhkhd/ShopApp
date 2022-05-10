@@ -1,14 +1,11 @@
 package com.example.shopview.adapter;
-
 import android.content.Context;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.shopview.R;
 
 public class AdHomeAdapter extends RecyclerView.Adapter<AdHomeAdapter.ViewHolder> {
@@ -29,8 +26,7 @@ public class AdHomeAdapter extends RecyclerView.Adapter<AdHomeAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-
-        holder.imageView.setImageURI(Uri.parse("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZyxUwl8tY-5lH_JM2-3QyS5IksQYB1oVFrw&usqp=CAU"));
+        holder.imageView.setVisibility(View.VISIBLE);
 
 
     }

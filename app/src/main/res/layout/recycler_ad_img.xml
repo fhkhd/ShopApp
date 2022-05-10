@@ -10,10 +10,9 @@
         android:id="@+id/recycler_image_ad"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="horizontal"
-        tools:listitem="@layout/ad_recycler"
-        />
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/ad_recycler" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_circle_ad"
@@ -22,7 +21,6 @@
         android:layout_alignParentBottom="true"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="horizontal"
-        android:textAlignment="center"
         android:layout_margin="5dp"
         tools:listitem="@layout/ad_circle_item"/>
 
