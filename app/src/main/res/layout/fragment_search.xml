@@ -3,21 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white_back"
     tools:context=".fragment.SearchFragment">
 
-    <EditText
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/search_editext"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/white"
         android:layout_margin="10dp"
-        android:elevation="10dp"
+        android:elevation="4dp"
+        android:gravity="right"
+
         android:textColor="@color/black"
-        android:hint="جستجو.."
         android:fontFamily="@font/iran_sans"
         android:paddingHorizontal="10dp"
-        />
+        >
+
+            <androidx.appcompat.widget.SearchView
+                app:searchIcon="@drawable/ic_search"
+                app:defaultQueryHint="جستجوی محصولو..."
+                android:layout_alignParentRight="true"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
 
 
 
