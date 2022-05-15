@@ -6,6 +6,7 @@
     android:id="@+id/circle_ad_image"
     android:layout_gravity="center"
     app:layout_anchorGravity="center"
+    android:layout_marginRight="5dp"
     android:src="@drawable/ic_circle">
 
 </ImageView>
