@@ -1,5 +1,7 @@
 package com.example.shopview.fragment;
 
+import static androidx.test.core.app.ApplicationProvider.getApplicationContext;
+
 import android.annotation.SuppressLint;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -16,7 +18,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.shopview.R;
@@ -25,6 +29,7 @@ import com.example.shopview.R;
 public class SearchFragment extends Fragment {
 
     Toolbar search_editext;
+    ListView listView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,15 +37,23 @@ public class SearchFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_search, container, false);
         setSearch(view);
 //        setHasOptionsMenu(true);
+        setListView(view);
         return view;
     }
 
-    public void setSearch(View view){
+    private void setSearch(View view){
         search_editext = view.findViewById(R.id.search_editext);
         search_editext.setTitle("");
         search_editext.setTitleTextColor(getResources().getColor(R.color.white_back));
         ((AppCompatActivity)getActivity()).setSupportActionBar(search_editext);
 //        setSupportActionBar(search_editext);
+    }
+
+    private void setListView(View view){
+        listView = view.findViewById(R.id.search_history);
+        String[] strings = {"کیک" , "چیبس" , "پنیر"};
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_list_item_1,strings);
+        listView.setAdapter(arrayAdapter);
     }
 
 //    @SuppressLint("ResourceAsColor")
