@@ -11,9 +11,9 @@
         android:id="@+id/cart_image_item"
         android:layout_width="100dp"
         android:layout_height="match_parent"
-        android:paddingVertical="2dp"
         android:layout_marginRight="10dp"
-        android:src="@drawable/oreo"/>
+        android:paddingVertical="2dp"
+        android:src="@drawable/oreo" />
 
 
     <ImageView
@@ -100,14 +100,14 @@
         android:id="@+id/last_price_item_cart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/cansel_cart_item"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
         android:fontFamily="@font/irsansfanum"
         android:text="965,333"
         android:textColor="@color/gray"
-        android:textSize="8dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/cansel_cart_item"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="10dp"/>
+        android:textSize="8dp" />
 
 
     <TextView
@@ -116,13 +116,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/last_price_item_cart"
         android:layout_alignParentLeft="true"
-        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
         android:layout_toStartOf="@+id/add_remove_cart"
         android:fontFamily="@font/irsansfanum"
-        android:layout_marginLeft="10dp"
         android:text="892,000 ریال"
         android:textColor="@color/black"
         android:textFontWeight="10"
-        android:textSize="11dp" />
+        android:textSize="11dp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

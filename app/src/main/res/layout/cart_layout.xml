@@ -11,18 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:background="@color/white"
-        android:elevation="4dp"
-        >
+        android:elevation="4dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:fontFamily="@font/iran_sans"
             android:gravity="center"
             android:text="سبد خرید"
-            android:textSize="18dp"
             android:textColor="@color/black"
-            android:fontFamily="@font/iran_sans"
-            />
+            android:textSize="18dp" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,11 +34,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:textColor="@color/red"
+            android:layout_marginLeft="10dp"
             android:fontFamily="@font/iran_sans"
             android:text="حذف همه"
-            android:textSize="12dp"
-            android:layout_marginLeft="10dp"/>
+            android:textColor="@color/red"
+            android:textSize="12dp" />
     </androidx.appcompat.widget.Toolbar>
 
 
@@ -46,13 +46,13 @@
         android:id="@+id/recycler_carts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
         android:layout_below="@+id/toolbar_cart"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
         android:clipToPadding="false"
         android:paddingBottom="10dp"
-        android:layout_marginTop="10dp"
         tools:itemCount="2"
-        tools:listitem="@layout/cart_item"/>
+        tools:listitem="@layout/cart_item" />
 
     <RelativeLayout
         android:id="@+id/box_cart"
