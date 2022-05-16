@@ -2,6 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="120dp"
+    app:layout_goneMarginBottom="10dp"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginBottom="5dp">
 
@@ -27,10 +29,10 @@
         android:id="@+id/cart_title_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@+id/cart_image_item"
-        android:fontFamily="@font/iran_sans"
         android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/cart_image_item"
+        android:fontFamily="@font/iran_sans"
         android:gravity="center"
         android:text="بیسکویت اورو کوچک"
         android:textColor="@color/black"

@@ -50,7 +50,215 @@
         android:layout_below="@+id/toolbar_cart"
         android:clipToPadding="false"
         android:paddingBottom="10dp"
-        tools:listitem="@layout/cart_item"
+        android:layout_marginTop="10dp"
+        tools:itemCount="2"
+        tools:listitem="@layout/cart_item"/>
+
+    <RelativeLayout
+        android:id="@+id/box_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@+id/recycler_carts"
+        >
+
+        <TextView
+            android:id="@+id/title_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:text="جزئیات فاکتور"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/number_carts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_detail"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/iran_sans"
+            android:gravity="center"
+            android:text="تعداد اقلام"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            tools:ignore="InvalidId" />
+
+        <TextView
+            android:id="@+id/total_befor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/number_carts"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/iran_sans"
+            android:gravity="center"
+            android:text="جمع کل قبل از تخفیف"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            tools:ignore="InvalidId" />
+
+
+        <TextView
+            android:id="@+id/profit_carts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total_befor"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/iran_sans"
+            android:gravity="center"
+            android:text="(-) سود شما از این خرید"
+            android:textColor="@color/teal_200"
+            android:textSize="10dp"
+            tools:ignore="InvalidId" />
+
+        <TextView
+            android:id="@+id/total_after"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profit_carts"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/iran_sans"
+            android:gravity="center"
+            android:text="جمع کل بعد از تخفیف"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            tools:ignore="InvalidId" />
+
+
+        <TextView
+            android:id="@+id/number_carts_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_detail"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/irsansfanum"
+            android:gravity="center"
+            android:text="2 عدد"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            tools:ignore="InvalidId" />
+
+        <TextView
+            android:id="@+id/total_befor_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/number_carts"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/irsansfanum"
+            android:gravity="center"
+            android:text="98,000 ریال"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            tools:ignore="InvalidId" />
+
+
+        <TextView
+            android:id="@+id/profit_carts_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total_befor"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/irsansfanum"
+            android:gravity="center"
+            android:text="223،800 ریال"
+            android:textColor="@color/teal_200"
+            android:textSize="10dp"
+            tools:ignore="InvalidId" />
+
+        <TextView
+            android:id="@+id/total_after_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profit_carts"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/irsansfanum"
+            android:gravity="center"
+            android:text="82,600 ریال"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            tools:ignore="InvalidId" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_200"
+            android:orientation="horizontal"
+            android:layout_below="@+id/total_after"
+            >
+
+            <TextView
+                android:id="@+id/total_can_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/irsansfanum"
+                android:gravity="center"
+                android:text="82,600 ریال"
+                android:textColor="@color/white_back"
+                android:textSize="12dp"
+                tools:ignore="InvalidId" />
+
+            <TextView
+                android:id="@+id/total_can"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/iran_sans"
+                android:gravity="center"
+                android:text="جمع کل بعد از تخفیف"
+                android:textColor="@color/white_back"
+                android:textSize="12dp"
+                tools:ignore="InvalidId" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/continue_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ادامه سفارش"
+        android:backgroundTint="@color/red"
+        android:layout_marginHorizontal="30dp"
+        android:layout_below="@+id/box_cart"
+        android:layout_marginTop="10dp"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textColor="@color/white_back"
+        android:elevation="2dp"
+        tools:ignore="UnknownId" />
+
 
 
 </RelativeLayout>
